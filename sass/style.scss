@@ -1,20 +1,68 @@
 @import "config.scss";
-@keyframes float {
-    0% {
-        transform: translateY(0px);
+
+/*     Pre-Loader    */
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 990;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+}
+
+.layer {
+    background-color: #000;
+}
+
+.layer-1 {flex: 1;}
+.layer-2 {flex: 1;}
+.layer-3 {flex: 1;}
+.layer-4 {flex: 1;}
+.layer-5 {flex: 1;}
+
+
+
+/*     Custom Cursor     */
+.cursor {
+    left: 10px;
+    width: 20px;
+    z-index: 900;
+    position: fixed;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: $white;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+}
+
+.cursor.state-1 {
+    width: 40px;
+    transition: width .3s, height .3s;
+}
+
+.cursor.state-2 {
+    width: 150px;
+    background: $green;
+    mix-blend-mode: normal;
+    transition: width .3s, height .3s;
+
+    &::before {
+        width: 100%;
+        height: 100%;
+        content: '▶';
+        color: $black;
+        display: flex;
+        cursor: pointer;
+        font-size: 5rem;
+        margin-left: .1em;
+        align-items: center;
+        justify-content: center;
     }
-    25% {
-        transform: translateY(10px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    75% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }}
+}
+
 
 
 /*     Navbar     */
@@ -125,6 +173,8 @@
 /*     Contents     */
 section {
     width: 100%;
+    height: 100%;
+
 
     .hero {
         width: 100%;
@@ -245,6 +295,7 @@ section {
     .benefit {
         width: 100%;
         height: 100vh;
+        background-color: $white;
 
         &__item {
             width: 100%;
@@ -282,6 +333,7 @@ section {
     .process {
         width: 100%;
         height: 100vh;
+        background-color: $white;
 
         &__item {
             width: 100%;
@@ -356,6 +408,7 @@ section {
     .plans {
         width: 100%;
         height: 120vh;
+        background-color: $white;
 
         &__title {
             font-size: 4rem;
@@ -399,6 +452,7 @@ section {
         width: 100%;
         height: 80vh;
         padding: 5% 10%;
+        background-color: $white;
 
         &__box {
             width: 100%;
@@ -479,6 +533,13 @@ section {
                 padding-top: 1em;
                 font-size: 1.5rem;
                 justify-content: center;
+                
+                ion-icon {
+                    &:hover {
+                        transition: .3s;
+                        color: $green;
+                    }
+                }
             }
         }
 
