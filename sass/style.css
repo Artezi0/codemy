@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*     Color Pallete     */
 /*     Typeface     */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
@@ -10,6 +11,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+  counter-reset: mycounter;
 }
 
 li {
@@ -25,6 +27,14 @@ body,
 html {
   width: 100%;
   height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
 }
 
 @-webkit-keyframes float {
@@ -345,6 +355,11 @@ section .data2 .spotify {
           filter: contrast(100);
 }
 
+section .data2 .apple {
+  right: -5%;
+  margin-bottom: .6em;
+}
+
 section .benefit {
   width: 100%;
   height: 100vh;
@@ -381,64 +396,79 @@ section .benefit__item video {
           transform: translate(-50%, -100%);
 }
 
-section #goals {
+section .process {
   width: 100%;
   height: 100vh;
 }
 
-section #goals .goals--title {
-  padding-top: 150px;
-  color: #10101d;
+section .process__item {
+  width: 100%;
+  height: 100%;
+  padding: 0 10%;
+  position: relative;
+}
+
+section .process__item h1 {
+  font-size: 3rem;
+  padding-top: 3em;
+  font-family: 'Space Grotesk';
+}
+
+section .process__item h1 span {
   font-size: 5rem;
-  font-weight: 800;
-  line-height: 80%;
-  text-align: center;
-  letter-spacing: -5px;
-  text-transform: uppercase;
-  font-family: 'Open-Sans', sans-serif;
 }
 
-section #goals .goals--container {
-  width: 80%;
-  height: 30vh;
-  display: -ms-grid;
-  display: grid;
-  margin-left: 10%;
-  margin-top: 50px;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+section .process__item ul {
+  padding-top: 2em;
+  font-family: 'PP Neue Montreal';
 }
 
-section #goals .goals--container .block {
-  width: 90%;
-  display: block;
-  border-radius: 10px;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  border: 1px solid #10101d;
+section .process__item ul li {
+  width: 30%;
+  font-size: 2rem;
+  cursor: default;
+  margin-bottom: 1em;
+  position: relative;
+  padding-bottom: .2em;
+  border-bottom: 1px solid black;
 }
 
-section #goals .goals--container .block h1 {
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 20px 10px;
-  font-weight: 800;
-  text-transform: capitalize;
-  font-family: 'Lato', sans-serif;
+section .process__item ul li::before {
+  content: '→';
+  color: #000;
+  font-size: 2rem;
+  padding-right: 1em;
 }
 
-section #goals .goals--container .block p {
-  text-align: center;
-  padding: 10px 10px;
-  font-family: 'Lato', sans-serif;
+section .process__item__img {
+  top: 45%;
+  right: 23%;
+  z-index: 2;
+  width: 480px;
+  height: 240px;
+  overflow: hidden;
+  position: absolute;
+  background: black;
 }
 
-section #goals .goals--container .block:hover {
-  border: none;
-  color: #fff;
-  -webkit-transition: .3s;
-  transition: .3s;
-  background-color: #D5FC31;
+section .process__item__img img {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+section .process__item__img img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+section .process__item__frame {
+  top: 47%;
+  right: 21%;
+  z-index: 1;
+  width: 480px;
+  height: 240px;
+  position: absolute;
+  border: 1px solid black;
 }
 
 section .plans {
@@ -446,76 +476,92 @@ section .plans {
   height: 120vh;
 }
 
-section .plans h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  padding-top: 10%;
-  color: #10101d;
+section .plans__title {
+  font-size: 4rem;
+  padding-top: 1em;
   text-align: center;
-  letter-spacing: -5px;
-  text-transform: uppercase;
-  font-family: 'Open-Sans', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-section .plans p {
-  font-size: 18px;
+section .plans__desc {
+  font-size: 1.1rem;
   text-align: center;
-  font-family: 'Lato', sans-serif;
+  font-family: 'PP Neue Montreal';
 }
 
-section .plans__container {
-  width: 80%;
-  height: 70vh;
-  display: -ms-grid;
-  display: grid;
-  margin-left: 10%;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+section .plans .container {
+  width: 100%;
 }
 
-section .plans__container .block {
-  width: 80%;
-  height: 80%;
+section .plans .container .row {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 30px;
-  margin-left: 10%;
-  border-radius: 10px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  margin-top: 2em;
+  padding-right: 4em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid black;
-  font-family: 'Lato', sans-serif;
 }
 
-section .plans__container .block h3 {
-  font-size: 1.2rem;
-  padding-top: 20px;
-  position: absolute;
-  font-weight: bolder;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-section .plans__container .block ion-icon {
-  opacity: 50%;
-  display: block;
+section .plans .container .row ion-icon {
   font-size: 8rem;
-  color: #10101d;
-  position: absolute;
-  margin-top: 120px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-left: .5em;
 }
 
-section .plans__container .block p {
-  margin-top: 50px;
-  position: absolute;
+section .plans .container .row ion-icon:hover {
+  color: #D5FC31;
+  font-size: 8.5rem;
 }
 
-section .plans__container .block button {
-  color: #fff;
+section .data3 {
+  width: 100%;
+  height: 80vh;
+  padding: 5% 10%;
+}
+
+section .data3__box {
+  width: 100%;
+  height: 100%;
+  color: #000;
+  position: relative;
+  background-color: #D5FC31;
+  border: 1px solid black;
+  font-family: 'PP Neue Montreal';
+}
+
+section .data3__box h1 {
+  height: 65%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 7rem;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: capitalize;
+  font-family: 'Space Grotesk';
+}
+
+section .data3__box p {
+  padding-top: 19%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+section .data3__box button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border: none;
   outline: none;
   cursor: pointer;
@@ -524,32 +570,31 @@ section .plans__container .block button {
       -ms-user-select: none;
           user-select: none;
   padding: 10px 24px;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  border-radius: 300px;
+  background: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-section .plans__container .block button:hover {
+section .data3__box button a {
+  color: #fff;
+  background: #000;
+  padding: 12px 35px;
+  font-size: 1.5rem;
+  margin-top: .5em;
   -webkit-transition: .3s;
   transition: .3s;
-  background: #10101d;
+  font-family: 'PP Neue Montreal';
 }
 
-section .plans__container .best {
-  height: 90%;
+section .data3__box button a:hover {
+  color: #000;
+  background: #fff;
 }
 
-section .plans img {
-  right: 2%;
-  width: 14%;
-  position: absolute;
-}
-
-section #footer {
+section .footer {
   width: 100%;
-  height: 50vh;
+  height: 30vh;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -557,63 +602,53 @@ section #footer {
   background: #000;
 }
 
-section #footer .footer--text {
-  width: 45%;
-  float: left;
-  height: 100%;
-  padding: 4% 5%;
+section .footer__upper {
+  width: 100%;
+  height: 60%;
+  color: #666;
+  position: relative;
+  text-align: center;
+  font-family: 'PP Neue Montreal';
 }
 
-section #footer .footer--text h1 {
-  color: #fff;
-  font-size: 5rem;
-  font-weight: 400;
-  font-family: 'PP Neue Montreal', sans-serif;
-}
-
-section #footer .footer--text h3 {
-  color: #fff;
-  font-weight: 400;
-  font-family: 'PP Neue Montreal', sans-serif;
-}
-
-section #footer .footer--text ul {
-  padding-top: 20px;
-}
-
-section #footer .footer--text ul a {
-  color: #fff;
-  font-size: 2rem;
-  text-decoration: none;
-}
-
-section #footer .footer--text ul a:hover {
+section .footer__upper h1 {
   color: #D5FC31;
-  -webkit-transition: .3s;
-  transition: .3s;
+  padding-top: 1em;
 }
 
-section #footer .footer--faq {
-  width: 30%;
+section .footer__upper .socials {
+  gap: .5em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1em;
+  font-size: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section .footer__bottom {
+  width: 100%;
+  height: 40%;
+  color: #666;
+  font-size: .8rem;
+  position: relative;
+  text-align: center;
+  font-family: 'PP Neue Montreal';
+}
+
+section .footer__bottom p {
+  width: 100%;
   height: 100%;
-  float: right;
-  color: #fff;
-  padding: 6% 1%;
-  margin-right: 25%;
-}
-
-section #footer .footer--faq li {
-  list-style: none;
-  margin-bottom: 5px;
-  font-size: 1.2rem;
-  font-family: 'Lato', sans-serif;
-}
-
-section #footer .footer--faq .faq--title {
-  font-size: 2rem;
-  font-weight: bold;
-  padding-bottom: 10px;
-  -webkit-text-decoration: underline #D5FC31;
-          text-decoration: underline #D5FC31;
-  font-family: 'Lato', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
