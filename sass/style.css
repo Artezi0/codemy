@@ -1,0 +1,622 @@
+/*     Color Pallete     */
+/*     Typeface     */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap");
+/*     Universal Classes     */
+/*     Web Configuration     */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  75% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  75% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+/*     Navbar     */
+.nav {
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #fff;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'PP Neue Montreal', sans-serif;
+}
+
+.nav__logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__links {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__links li {
+  color: #000;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-left: 1em;
+  font-size: 1.1rem;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.nav__links li:hover {
+  font-size: 1.2rem;
+}
+
+.nav__btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 10px 24px;
+  background: none;
+}
+
+.nav__btn a {
+  color: #000;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-size: 1.1rem;
+  padding: 10px 24px;
+  background-color: #D5FC31;
+  font-family: 'PP Neue Montreal', sans-serif;
+}
+
+.nav__btn a:hover {
+  color: #fff;
+  background-color: #10101d;
+}
+
+/*     Banner     */
+.banner {
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10%;
+  position: fixed;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #D5FC31;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner__title {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  font-size: 1.2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'PP Neue Montreal';
+}
+
+.banner__btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 10px 24px;
+  background: none;
+}
+
+.banner__btn a {
+  color: #fff;
+  background: #000;
+  font-size: 1.2rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+  padding: 10px 24px;
+  font-family: 'PP Neue Montreal';
+}
+
+.banner__btn a:hover {
+  color: #000;
+  background: #fff;
+}
+
+/*     Contents     */
+section {
+  width: 100%;
+}
+
+section .hero {
+  width: 100%;
+  height: 100vh;
+}
+
+section .hero__item {
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
+  overflow: hidden;
+  position: relative;
+}
+
+section .hero__item h1 {
+  font-size: 6rem;
+  line-height: 90%;
+  margin-top: 1.7em;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+section .hero__item p {
+  padding-top: 1.5em;
+  font-size: 1.1rem;
+  font-family: 'PP Neue Montreal', sans-serif;
+}
+
+section .hero__item img {
+  top: 10%;
+  right: -5%;
+  position: absolute;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+section .data {
+  width: 100%;
+  height: 30vh;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 5%;
+  background: #000;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .data h1 {
+  font-size: 2.8rem;
+  padding-right: 5.3em;
+}
+
+section .data h1, section .data h2 {
+  font-weight: 500;
+  font-family: 'PP Neue Montreal';
+}
+
+section .data h2 {
+  line-height: 90%;
+  margin-left: 2em;
+}
+
+section .data2 {
+  width: 100%;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 5%;
+  overflow: hidden;
+  position: relative;
+  background: #D5FC31;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+section .data2 h1 {
+  height: 70%;
+  font-weight: 400;
+  font-size: 2.8rem;
+  text-align: right;
+  line-height: 95%;
+  font-family: 'PP Neue Montreal';
+}
+
+section .data2 p {
+  font-size: 1.1rem;
+  position: absolute;
+  padding-top: 5em;
+  font-family: 'PP Neue Montreal';
+}
+
+section .data2 img {
+  position: absolute;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+}
+
+section .data2 .google {
+  right: 27%;
+  -webkit-transform: scale(0.08);
+          transform: scale(0.08);
+}
+
+section .data2 .microsoft {
+  right: 12%;
+}
+
+section .data2 .spotify {
+  right: 16%;
+  -webkit-transform: scale(0.15);
+          transform: scale(0.15);
+  -webkit-filter: contrast(100);
+          filter: contrast(100);
+}
+
+section .benefit {
+  width: 100%;
+  height: 100vh;
+}
+
+section .benefit__item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: 'PP Neue Montreal';
+}
+
+section .benefit__item h1 {
+  font-size: 4rem;
+  padding-top: 8%;
+  text-align: center;
+  font-family: 'Space Grotesk';
+}
+
+section .benefit__item p {
+  text-align: center;
+  font-size: 1.1rem;
+  padding-top: .3em;
+}
+
+section .benefit__item video {
+  top: 100%;
+  left: 50%;
+  width: 40em;
+  height: 22em;
+  position: absolute;
+  background: #000;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+section #goals {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: relative;
+}
+
+section #goals .goals--title {
+  padding-top: 150px;
+  color: #10101d;
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 80%;
+  text-align: center;
+  letter-spacing: -5px;
+  text-transform: uppercase;
+  font-family: 'Open-Sans', sans-serif;
+}
+
+section #goals .goals--container {
+  width: 80%;
+  height: 30vh;
+  display: -ms-grid;
+  display: grid;
+  margin-left: 10%;
+  margin-top: 50px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+section #goals .goals--container .block {
+  width: 90%;
+  display: block;
+  border-radius: 10px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border: 1px solid #10101d;
+}
+
+section #goals .goals--container .block h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px 10px;
+  font-weight: 800;
+  text-transform: capitalize;
+  font-family: 'Lato', sans-serif;
+}
+
+section #goals .goals--container .block p {
+  text-align: center;
+  padding: 10px 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+section #goals .goals--container .block:hover {
+  border: none;
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+  background-color: #D5FC31;
+}
+
+section #plans {
+  width: 100%;
+  height: 120vh;
+  display: none;
+}
+
+section #plans h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-top: 10%;
+  color: #10101d;
+  text-align: center;
+  letter-spacing: -5px;
+  text-transform: uppercase;
+  font-family: 'Open-Sans', sans-serif;
+}
+
+section #plans p {
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+section #plans .plans--container {
+  width: 80%;
+  height: 70vh;
+  display: -ms-grid;
+  display: grid;
+  margin-left: 10%;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+section #plans .plans--container .block {
+  width: 80%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  margin-left: 10%;
+  border-radius: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid black;
+  font-family: 'Lato', sans-serif;
+}
+
+section #plans .plans--container .block h3 {
+  font-size: 1.2rem;
+  padding-top: 20px;
+  position: absolute;
+  font-weight: bolder;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+section #plans .plans--container .block ion-icon {
+  opacity: 50%;
+  display: block;
+  font-size: 8rem;
+  color: #10101d;
+  position: absolute;
+  margin-top: 120px;
+}
+
+section #plans .plans--container .block p {
+  margin-top: 50px;
+  position: absolute;
+}
+
+section #plans .plans--container .block button {
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 10px 24px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border-radius: 300px;
+}
+
+section #plans .plans--container .block button:hover {
+  -webkit-transition: .3s;
+  transition: .3s;
+  background: #10101d;
+}
+
+section #plans .plans--container .best {
+  height: 90%;
+}
+
+section #plans img {
+  right: 2%;
+  width: 14%;
+  position: absolute;
+}
+
+section #footer {
+  width: 100%;
+  height: 50vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: #000;
+}
+
+section #footer .footer--text {
+  width: 45%;
+  float: left;
+  height: 100%;
+  padding: 4% 5%;
+}
+
+section #footer .footer--text h1 {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 400;
+  font-family: 'PP Neue Montreal', sans-serif;
+}
+
+section #footer .footer--text h3 {
+  color: #fff;
+  font-weight: 400;
+  font-family: 'PP Neue Montreal', sans-serif;
+}
+
+section #footer .footer--text ul {
+  padding-top: 20px;
+}
+
+section #footer .footer--text ul a {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+section #footer .footer--text ul a:hover {
+  color: #D5FC31;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+section #footer .footer--faq {
+  width: 30%;
+  height: 100%;
+  float: right;
+  color: #fff;
+  padding: 6% 1%;
+  margin-right: 25%;
+}
+
+section #footer .footer--faq li {
+  list-style: none;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-family: 'Lato', sans-serif;
+}
+
+section #footer .footer--faq .faq--title {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  -webkit-text-decoration: underline #D5FC31;
+          text-decoration: underline #D5FC31;
+  font-family: 'Lato', sans-serif;
+}
