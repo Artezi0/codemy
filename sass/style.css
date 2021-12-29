@@ -384,8 +384,6 @@ section .benefit__item video {
 section #goals {
   width: 100%;
   height: 100vh;
-  display: none;
-  position: relative;
 }
 
 section #goals .goals--title {
@@ -443,13 +441,12 @@ section #goals .goals--container .block:hover {
   background-color: #D5FC31;
 }
 
-section #plans {
+section .plans {
   width: 100%;
   height: 120vh;
-  display: none;
 }
 
-section #plans h1 {
+section .plans h1 {
   font-size: 3rem;
   font-weight: 800;
   padding-top: 10%;
@@ -460,13 +457,13 @@ section #plans h1 {
   font-family: 'Open-Sans', sans-serif;
 }
 
-section #plans p {
+section .plans p {
   font-size: 18px;
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
 
-section #plans .plans--container {
+section .plans__container {
   width: 80%;
   height: 70vh;
   display: -ms-grid;
@@ -476,7 +473,7 @@ section #plans .plans--container {
       grid-template-columns: 1fr 1fr 1fr;
 }
 
-section #plans .plans--container .block {
+section .plans__container .block {
   width: 80%;
   height: 80%;
   display: -webkit-box;
@@ -494,7 +491,7 @@ section #plans .plans--container .block {
   font-family: 'Lato', sans-serif;
 }
 
-section #plans .plans--container .block h3 {
+section .plans__container .block h3 {
   font-size: 1.2rem;
   padding-top: 20px;
   position: absolute;
@@ -503,7 +500,7 @@ section #plans .plans--container .block h3 {
       align-self: flex-start;
 }
 
-section #plans .plans--container .block ion-icon {
+section .plans__container .block ion-icon {
   opacity: 50%;
   display: block;
   font-size: 8rem;
@@ -512,12 +509,12 @@ section #plans .plans--container .block ion-icon {
   margin-top: 120px;
 }
 
-section #plans .plans--container .block p {
+section .plans__container .block p {
   margin-top: 50px;
   position: absolute;
 }
 
-section #plans .plans--container .block button {
+section .plans__container .block button {
   color: #fff;
   border: none;
   outline: none;
@@ -534,17 +531,17 @@ section #plans .plans--container .block button {
   border-radius: 300px;
 }
 
-section #plans .plans--container .block button:hover {
+section .plans__container .block button:hover {
   -webkit-transition: .3s;
   transition: .3s;
   background: #10101d;
 }
 
-section #plans .plans--container .best {
+section .plans__container .best {
   height: 90%;
 }
 
-section #plans img {
+section .plans img {
   right: 2%;
   width: 14%;
   position: absolute;
