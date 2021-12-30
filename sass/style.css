@@ -720,10 +720,10 @@ section .footer__bottom p {
           justify-content: center;
 }
 
-/*     For Mobile     */
-@media only screen and (min-width: 320px) and (max-width: 425px) {
+/*     For Mobile  (Mobile M & Mobile L)   */
+@media only screen and (min-width: 375px) and (max-width: 425px) {
   body {
-    min-width: 320px;
+    min-width: 375px;
     max-width: 425px;
   }
   .overlay {
@@ -731,6 +731,9 @@ section .footer__bottom p {
   }
   .cursor {
     display: none;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
   }
   .nav {
     top: 0;
@@ -766,12 +769,13 @@ section .footer__bottom p {
     color: #fff;
     background-color: #10101d;
   }
-  video {
+  .banner {
     display: none;
   }
   section {
     overflow-x: hidden;
     max-width: 425px;
+    min-width: 375px;
   }
   section .hero {
     height: 80vh;
@@ -785,6 +789,7 @@ section .footer__bottom p {
   }
   section .hero__item img {
     right: -55%;
+    display: none;
     margin-top: 8em;
     -webkit-transform: scale(0.4);
             transform: scale(0.4);
@@ -792,7 +797,7 @@ section .footer__bottom p {
   section .hero__item h1 {
     font-size: 3rem;
     line-height: 90%;
-    margin-top: 2.5em;
+    margin-top: 2.8em;
   }
   section .hero__item p {
     width: 70%;
@@ -815,5 +820,156 @@ section .footer__bottom p {
     position: relative;
     background-color: #D5FC31;
     font-family: 'PP Neue Montreal';
+  }
+  section .data {
+    height: 30vh;
+    display: block;
+    padding-top: 7%;
+    position: relative;
+  }
+  section .data h1 {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 2rem;
+    margin-top: .2em;
+    position: absolute;
+  }
+  section .data h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1rem;
+    margin-top: .5em;
+    font-weight: 400;
+    margin-left: 15em;
+  }
+  section .data2 {
+    width: 100%;
+    height: 25vh;
+  }
+  section .data2 h1 {
+    height: 70%;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 105%;
+    text-align: right;
+    font-family: 'PP Neue Montreal';
+  }
+  section .data2 p {
+    font-size: .8rem;
+    position: absolute;
+    padding-top: 5em;
+    font-family: 'PP Neue Montreal';
+  }
+  section .data2 img {
+    position: absolute;
+    margin-top: 6em;
+    display: none;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  section .data2 .google {
+    right: -146%;
+    margin-bottom: .3em;
+    -webkit-transform: scale(0.03);
+            transform: scale(0.03);
+  }
+  section .data2 .microsoft {
+    right: -168%;
+    margin-bottom: .4em;
+    -webkit-transform: scale(0.05);
+            transform: scale(0.05);
+  }
+  section .data2 .spotify {
+    right: -125%;
+    margin-bottom: .4em;
+    -webkit-transform: scale(0.08);
+            transform: scale(0.08);
+    -webkit-filter: contrast(100);
+            filter: contrast(100);
+  }
+  section .data2 .apple {
+    right: -72%;
+  }
+  section .benefit {
+    height: 70vh;
+  }
+  section .benefit__item h1 {
+    padding: 0 5%;
+    font-size: 2rem;
+    padding-top: 20%;
+    line-height: 90%;
+    text-align: center;
+    font-family: 'Space Grotesk';
+  }
+  section .benefit__item p {
+    text-align: center;
+    font-size: .8rem;
+    padding-top: 1em;
+  }
+  section .benefit__item video {
+    top: 85%;
+    left: 50%;
+    width: 20em;
+    height: 12em;
+    position: absolute;
+    background: #000;
+    -webkit-transform: translate(-50%, -85%);
+            transform: translate(-50%, -85%);
+  }
+  section .process {
+    height: 60vh;
+  }
+  section .process__item h1 {
+    font-size: 1rem;
+  }
+  section .process__item h1 span {
+    font-size: 2rem;
+  }
+  section .process__item ul {
+    padding-top: 2em;
+  }
+  section .process__item ul li {
+    width: 45%;
+    font-size: 1rem;
+    margin-bottom: 1em;
+    padding-bottom: .2em;
+  }
+  section .process__item ul li::before {
+    content: '→';
+    color: #000;
+    font-size: 1rem;
+    padding-right: .5em;
+  }
+  section .process__item__img {
+    top: 32%;
+    right: -30%;
+    z-index: 2;
+    width: 280px;
+    height: 140px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+    background: black;
+  }
+  section .process__item__img img {
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  section .process__item__img img:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  section .process__item__frame {
+    top: 34%;
+    right: -32%;
+    z-index: 1;
+    width: 280px;
+    height: 140px;
+    position: absolute;
+    border: 1px solid black;
   }
 }
