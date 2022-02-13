@@ -1,0 +1,43 @@
+/* Normalize */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behaviour: smooth;
+  font-family: 'Segoe UI', 
+                Tahoma, 
+                Geneva, 
+                Verdana, 
+                sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #ffff;
+  overscroll-behaviour: none;
+
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
