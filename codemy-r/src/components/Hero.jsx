@@ -4,6 +4,7 @@ import img from './img/mozaic.svg'
 import styled from 'styled-components'
 import { GrFormClose } from 'react-icons/gr'
 
+// Styled components
 const HeroText = styled.section`
 
 width: 100%;
@@ -45,14 +46,14 @@ position: relative;
 
         .hero__cta {
             button {
-                font-size: 20px;
-                border-radius: 100px;
-                font-family: 'PP Neue Montreal';
+              font-size: 20px;
+              padding: 10px 50px;
+              border-radius: 100px;
+              font-family: 'PP Neue Montreal';
             }
 
             .signup {
                 transition: .3s;
-                padding: 10px 50px;
                 background-color: #D5FC31;
                 
                 &:hover {
@@ -64,7 +65,6 @@ position: relative;
             .signin {
                 transition: .3s;
                 margin-left: 20px;
-                padding: 10px 25px;
                 border: 1px solid black;
                
                 &:hover {
@@ -87,6 +87,7 @@ position: relative;
         width: 100%;
         height: 100%;
         display: flex;
+        user-select: none;
         position: relative;
         justify-content: center;
 
@@ -103,6 +104,42 @@ position: relative;
         }
     }
 }
+
+@media screen and (max-width: 1024px) { /* No changes */ }
+@media screen and (max-width: 768px) { /* No changes */ }
+@media screen and (max-width: 425px) { 
+  .hero__items {
+    .hero__items-left {
+      h1 {
+        font-size: 55px;
+        margin-right: 0;
+        text-align: center;
+      }
+      p {
+        font-size: 15px;
+        margin-right: 0;
+        text-align: center;
+      }
+      img {
+        display: none;
+      }
+      .hero__cta {
+        display: flex;
+        flex-direction: column;
+
+        button {
+          font-size: 15px;
+          margin: 3px 30px;
+        }
+      }
+    }
+  }
+
+  .hero__popup {
+    display: none;
+  }
+}
+
 `
 // Functions
 function hide() {
